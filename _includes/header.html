@@ -1,0 +1,54 @@
+<!-- HEADER -->
+  <div id="blackout" onclick="toogleMenu()"></div> <!-- apply blackout effect --> 
+  <header class="site-header">
+    <a class="site-title" href="{{ site.baseurl }}/"><span class="icon-home"></span> {{ site.title }}</a>
+    <nav class="site-navbar">
+      <a id="aside-btn" class="icon-menu" onclick="toogleMenu()"></a>
+      <aside id="site-aside">
+        <ul class="site-pages-links">
+          {% for my_page in site.pages %}
+          {%if my_page.title != site.categories%}
+            {% if my_page.title %}
+              <li><a class="page-link" href="{{ my_page.url | prepend: site.baseurl }}">{{ my_page.title }}</a></li>
+            {% endif %}
+          {% endif %}
+          {% endfor %}
+        </ul>
+        <ul class="site-outside-links">
+          {% if site.twitter_username %}
+          <li><a href="http://twitter.com/{{site.twitter_username}}" class="icon-twitter"></a></li>
+          {% endif%}
+          {% if site.github_username %}
+          <li><a href="http://github.com/{{site.github_username}}" class="icon-github"></a></li>
+          {% endif%}
+          {% if site.linkedin_username %}
+          <li><a href="http://linkedin.com/{{site.linkedin_username}}" class="icon-linkedin"></a></li>
+          {% endif%}
+        </ul>
+      </aside>
+    </nav>
+  </header>
+
+  <script>
+    var blackOut = document.getElementById("blackout");
+    var siteAside = document.getElementById("site-aside");
+
+    function toogleMenu(){
+      if (blackOut.style.display == "") {
+        blackOut.style.display = "block";
+        blackOut.style.width = "100%";
+        blackOut.style.height = "100%";
+        blackOut.style.background = "rgba(0, 0, 0, 0.7)";
+        siteAside.style.right = "0px";
+      } else {
+        blackOut.style.background = "rgba(0, 0, 0, 0.0)";
+        siteAside.style.right = "-210px";
+        setTimeout(function(){
+          blackOut.style.display = "";
+          blackOut.style.width = 0;
+          blackOut.style.height = 0;
+        }, 250);
+      }
+    }
+  </script>
+  <!-- END HEADER -->

@@ -1,0 +1,51 @@
+---
+layout: default
+---
+<p class="site-slogan">{{ site.slogan }}</p>
+
+    <!-- SECTION -->
+    {% for collection in site.collections %}
+    <section class="site-section">
+      <div class="section-head">
+      {% if collection.name %}
+        <a href="{{ collection.url | prepend: site.baseurl }}" class="section-title">{{ collection.name }}</a>
+      {% else %}
+        <a href="{{ collection.url | prepend: site.baseurl }}" class="section-title">{{ collection.label }}</a>
+      {% endif %}
+        <a href="{{ collection.url | prepend: site.baseurl }}" class="section-read-more">Ver todos</a>
+      </div>
+      <div class="section-body pure-g">
+        {% for post in site[collection.label] limit:2 %}
+        <div class="section-item pure-u-1 pure-u-md-1-2">
+          <div class="item-title"> <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></div>
+          <div class="item-body pure-g">
+            <div class="item-img pure-u-1 pure-u-md-1-2">
+              {% assign images = post.content | split:"<img " %}
+              {% for image in images %}
+                {% if image contains 'src=' %}
+                  {% assign imageMarkup = image | split:">" | first %}
+                  <img {{ imageMarkup }}>
+                  {% break %}
+                {% endif %}
+              {% endfor %}
+            </div>
+            <div class="pure-u-1 pure-u-md-1-2">
+              <div class="l-box">
+                <div class="pure-g">
+                  <div class="item-description pure-u-1">
+                  <span class="item-date icon-calendar"> {{ post.date | date: "%b %-d, %Y" }}</span>
+                  {{ post.excerpt }}
+                  <a href="{{ post.url | prepend: site.baseurl }}" class="item-read-more">LEIA MAIS</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </section>
+    {% endfor %}
+    <!-- END SECTION -->
+
+    <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
