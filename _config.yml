@@ -14,6 +14,7 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://matepaiva.github.io" # the base hostname & protocol for your site
 slogan: "Desenvolvimento web também é coisa de humanas."
 permalink: /blog/:categories/:title/
+safe: false
 twitter_username:     matepaiva
 github_username:      matepaiva
 linkedin_username:    matepaiva
