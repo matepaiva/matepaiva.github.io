@@ -15,6 +15,7 @@ url: "http://matepaiva.github.io" # the base hostname & protocol for your site
 slogan: "Desenvolvimento web também é coisa de humanas."
 permalink: /blog/:categories/:title/
 safe: false
+lsi: true
 twitter_username:     matepaiva
 github_username:      matepaiva
 linkedin_username:    matepaiva
