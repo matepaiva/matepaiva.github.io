@@ -13,7 +13,7 @@ description: > # this means to ignore newlines until "baseurl:"
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://matepaiva.github.io" # the base hostname & protocol for your site
 slogan: "Desenvolvimento web também é coisa de humanas."
-permalink: /blog/:categories/:title/
+permalink: /:title/
 safe: false
 lsi: true
 twitter_username:     matepaiva
@@ -22,15 +22,4 @@ linkedin_username:    matepaiva
 
 # Build settings
 markdown: kramdown
-collections:
-  - projetos
-
-collections:
-  projetos:
-    name: Meus Projetos
-    output: true
-    url: /projetos/
-  posts:
-    name: Blog
-    url: /blog/
 
