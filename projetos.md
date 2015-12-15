@@ -1,5 +1,5 @@
 ---
 layout: read-all
-title: Meus projetos
-label: projetos
+title: Projetos
+label: posts
 ---
