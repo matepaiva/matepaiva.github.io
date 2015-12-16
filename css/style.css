@@ -48,6 +48,11 @@ body {
 	font-size: 0.9em;
 }
 
+.curr ul{
+	margin-left: 5px;
+	margin-right: 5px;
+}
+
 .curr p:before{
 	content: '◌ ';
 	color: #F5A700;
