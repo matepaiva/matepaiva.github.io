@@ -3,9 +3,7 @@ layout: default
 ---
 <p class="site-slogan">matepaiva// {{ page.title }}</p>
 
-{% for collection in site.collections %}
-  {% if collection.label == page.label %}
-    {% for post in site[collection.label] %}
+{% for post in site.posts %}
 <article class="post-wrap" itemscope itemtype="http://schema.org/BlogPosting">
   <header class="section-head post-head">
     {% if post.date %}
@@ -48,6 +46,4 @@ layout: default
     </div>
   </div>
 </article>
-{% endfor %}
-  {% endif %}
 {% endfor %}
