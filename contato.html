@@ -6,18 +6,18 @@ permalink: /contato/
 
 <form class="pure-form" action="//formspree.io/mmccpp@gmail.com"  id="contact-form" method="POST" onsubmit="success()">
 	<fieldset class="pure-group">
-        <input type="text" class="pure-input-1-2" placeholder="Seu nome" name="name">
-        <input type="email" name="_replyto" class="pure-input-1-2" placeholder="Seu email">
+        <input type="text" class="pure-input-1-2" placeholder="Seu nome" name="name" required>
+        <input type="email" name="_replyto" class="pure-input-1-2" placeholder="Seu email" required>
     </fieldset>
 
     <fieldset class="pure-group">
-        <input type="text" name="_subject" class="pure-input-1-2" placeholder="Do que se trata?">
-        <textarea class="pure-input-1-2" name="content" placeholder="Escreva sua mensagem aqui"></textarea>
+        <input type="text" name="_subject" class="pure-input-1-2" placeholder="Do que se trata?" required>
+        <textarea class="pure-input-1-2" name="content" placeholder="Escreva sua mensagem aqui" required></textarea>
     </fieldset>
 
     <div id="success-answer">ENVIADO!</div>
 
-    <button type="submit" value="Send" class="pure-button pure-input-1-2 pure-button-primary">Sign in</button>
+    <button type="submit" value="Send" class="pure-button pure-input-1-2 pure-button-primary">Enviar</button>
     <input type="hidden" name="_next" value="{{ site.url }}" />
 </form>
 
