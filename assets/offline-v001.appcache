@@ -9,7 +9,7 @@ CACHE MANIFEST
 ../css/pure-main.css
 ../css/font.css
 ../css/style.css
-../css/main.css
+../css/min.css
 ../js/Chart.min.js
 ../js/index.js
 
