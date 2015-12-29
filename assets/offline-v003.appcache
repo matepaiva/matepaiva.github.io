@@ -1,11 +1,14 @@
 CACHE MANIFEST
 ./avat.jpg
 ./compt.jpg
+../fonts/icomoon.ttf?wa1s2q 
+../fonts/icomoon.woff?wa1s2q
 ../fonts/icomoon.eot
 ../fonts/icomoon.svg
 ../fonts/icomoon.ttf
 ../fonts/icomoon.woff
 ../index.html
+../css/grids-responsive-min.css
 ../css/pure-min.css
 ../css/font.css
 ../css/style.css
