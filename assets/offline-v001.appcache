@@ -1,0 +1,17 @@
+CACHE MANIFEST
+./avat.jpg
+./compt.jpg
+../fonts/icomoon.eot
+../fonts/icomoon.svg
+../fonts/icomoon.ttf
+../fonts/icomoon.woff
+../index.html
+../css/pure-main.css
+../css/font.css
+../css/style.css
+../css/main.css
+../js/Chart.min.js
+../js/index.js
+
+NETWORK:
+*
