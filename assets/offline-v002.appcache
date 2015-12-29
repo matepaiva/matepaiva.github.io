@@ -6,10 +6,10 @@ CACHE MANIFEST
 ../fonts/icomoon.ttf
 ../fonts/icomoon.woff
 ../index.html
-../css/pure-main.css
+../css/pure-min.css
 ../css/font.css
 ../css/style.css
-../css/min.css
+../css/main.css
 ../js/Chart.min.js
 ../js/index.js
 
