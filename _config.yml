@@ -17,7 +17,7 @@ blogtitle: "Meus Projetos"
 permalink: /projetos/:title/
 twitter_username:     matepaiva
 github_username:      matepaiva
-linkedin_username:    matepaiva
+linkedin_address: https://br.linkedin.com/pub/matheus-paiva/b3/bb7/730
 
 # Build settings
 markdown: kramdown
