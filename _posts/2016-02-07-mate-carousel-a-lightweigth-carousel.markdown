@@ -347,7 +347,7 @@ And there are more things in the API that you can use to implement your features
 - **carousel.getIndex()**: returns the current index displayed. You can do useful stuff with this output.
 - **carousel.config()**: returns the current config object. Set things on the go.
 
-<h3>Again: get carousel.min.js!</h3>
+<h3>Again: get mateCarousel.min.js!</h3>
 It's just **2.4Kb** and saves a lot of time. [Download mateCarousel from it's repository on GitHub](http://github.com/matepaiva/mateCarousel).
 
 
