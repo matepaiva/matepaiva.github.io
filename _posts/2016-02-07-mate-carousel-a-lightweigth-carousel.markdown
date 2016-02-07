@@ -149,7 +149,7 @@ With this carousel, you can set autoplay, configure buttons, bullet-menu to chos
 
 Oh! There is no default theme, which means the CSS part is up to you. And that's a good thing!
 
-##How does it work?
+<h3>How does it work?</h3>
 **mateCarousel** iterates over elements of a DOM class. Once you call the library passing the class as an argument, we organize your carousel and leave it ready to shine! To make it, we use the translateX property. First element will have its value as 0%, second one as 100%, third one as 200% and so on.
 
 For example, this code:
