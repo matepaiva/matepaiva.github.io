@@ -96,9 +96,9 @@ color: grey;
 
 </style>
 
-#####We handle the ugly part and let the beauty for you!
+<h5>We handle the ugly part and let the beauty for you!</h5>
 
-###Example:
+<h3>Example:</h3>
 
 {% highlight html %}
 <div id="container">
@@ -139,10 +139,10 @@ Click the buttons below to see some features of our API in action:
     <button onclick="carousel.play(1000)">carousel.play(1000)</button>
 </div>
 
-##Get carousel.min.js!
+<h3>Get carousel.min.js!</h3>
 The minified version weighs just 2.4Kb! [Download mateCarousel from it's repository on GitHub](http://github.com/matepaiva/mateCarousel).
 
-##Introduction
+<h3>Introduction</h3>
 **mateCarousel** is a lightweight carousel with a simple API. It transform class element into slides and give you the control of it, using a config object and some API commands to use on the go.
 
 With this carousel, you can set autoplay, configure buttons, bullet-menu to chose between slides and a lot more. The way this API was developed let you chose from using the built-in solutions or handle the situations by yourself.
@@ -182,7 +182,7 @@ var carousel = mateCarousel ('inner');
 </div>
 {% endhighlight %}
 
-##The config object
+<h3>The config object</h3>
 The second argument you can pass (but don't feel obligated) is a config object. Some values are required to enable functionality, such as bullet-menu and after&before buttons:
 
 {% highlight javascript %}
@@ -200,7 +200,7 @@ var config = {
 };
 {% endhighlight %}
 
-##Attention please! CSS must have:
+<h3>Attention please! CSS must have:</h3>
 - The container block must have set overflow as "hidden" to achieve the carousel effect. And also, I advice you to set position to relative of fixed, but it depends on each case.
 - The class used to expose the elements to the Carousel must have position absolute, left: 0, top: 0, and should be nice to add some transition effect, such as "transform 300ms ease".
 - At this moment, that class must as well have width and height set to 100%. I am working on it, so we could show more than one element per view, each time. Contributions are welcome.
@@ -292,7 +292,7 @@ That was the CSS I used to make the example in this page:
 {% endhighlight %}
 
 
-##Ok. Now, how can I use the API?
+<h3>Ok. Now, how can I use the API?</h3>
 Supposing that you captured a class elements which are inside the same container, now you start playing with your JavaScript:
 
 {% highlight javascript %}
@@ -347,7 +347,7 @@ And there are more things in the API that you can use to implement your features
 - **carousel.getIndex()**: returns the current index displayed. You can do useful stuff with this output.
 - **carousel.config()**: returns the current config object. Set things on the go.
 
-##Again: get carousel.min.js!
+<h3>Again: get carousel.min.js!</h3>
 It's just 2.4Kb and save a lot of time. [Download mateCarousel from it's repository on GitHub](http://github.com/matepaiva/mateCarousel).
 
 
