@@ -348,7 +348,7 @@ And there are more things in the API that you can use to implement your features
 - **carousel.config()**: returns the current config object. Set things on the go.
 
 <h3>Again: get carousel.min.js!</h3>
-It's just 2.4Kb and save a lot of time. [Download mateCarousel from it's repository on GitHub](http://github.com/matepaiva/mateCarousel).
+It's just **2.4Kb** and saves a lot of time. [Download mateCarousel from it's repository on GitHub](http://github.com/matepaiva/mateCarousel).
 
 
 
