@@ -8,8 +8,8 @@ excerpt: "mateCarousel is a lightweight carousel with a simple API. It transform
 
 <style>
 #container {
-width: 400px;
-height: 400px;
+width: 100%;
+height: 300px;
 position: relative;
 overflow: hidden;
 margin: auto;
@@ -139,7 +139,7 @@ Click the buttons below to see some features of our API in action:
     <button onclick="carousel.play(1000)">carousel.play(1000)</button>
 </div>
 
-<h3>Get carousel.min.js!</h3>
+<h3>Get mateCarousel.min.js!</h3>
 The minified version weighs just 2.4Kb! [Download mateCarousel from it's repository on GitHub](http://github.com/matepaiva/mateCarousel).
 
 <h3>Introduction</h3>
