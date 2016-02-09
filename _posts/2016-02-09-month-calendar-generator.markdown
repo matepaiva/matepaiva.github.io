@@ -14,7 +14,10 @@ color: white;
 
 #calendar{
 padding-bottom: 10px;
-padding-left: 25%;
+}
+
+.month{
+margin: 0 auto;
 }
 
 .day {
