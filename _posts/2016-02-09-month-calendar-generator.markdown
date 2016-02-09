@@ -55,7 +55,9 @@ Try it yourself! Insert a date in format "YYYY, MM":
 
 
 <h3>Get Month Calendar Generator!</h3>
-The minified version weighs just 2.4Kb! [Download mateCarousel from it's repository on GitHub](http://github.com/matepaiva/mateCarousel).
+It's just 2k. [Download it now](https://raw.githubusercontent.com/matepaiva/month-calendar-generator/master/monthCalendarGen.min.js)!
+
+Or fork the [GitHub repo](http://matepaiva.github.io/projetos/month-calendar-generator/).
 
 <h3>Introduction</h3>
 
