@@ -55,9 +55,7 @@ Try it yourself! Insert a date in format "YYYY, MM":
 
 
 <h3>Get Month Calendar Generator!</h3>
-It's just 2k. [Download it now](https://raw.githubusercontent.com/matepaiva/month-calendar-generator/master/monthCalendarGen.min.js)!
-
-Or fork the [GitHub repo](http://matepaiva.github.io/projetos/month-calendar-generator/).
+It's just 2k. [Download it now](https://raw.githubusercontent.com/matepaiva/month-calendar-generator/master/monthCalendarGen.min.js)! Or fork the [GitHub repo](http://matepaiva.github.io/projetos/month-calendar-generator/).
 
 <h3>Introduction</h3>
 
