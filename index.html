@@ -13,7 +13,8 @@ layout: default
   <div class="section-body pure-g">
     {% for post in site.posts limit:4 %}
     <div class="section-item pure-u-1 pure-u-md-1-2">
-      <div class="item-title"> <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></div>
+      <div class="item-title"> <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+      </div>
       <div class="item-body pure-g">
         {% if post.image %}
         <div class="item-img pure-u-1 pure-u-md-1-2">
