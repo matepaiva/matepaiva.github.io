@@ -3,7 +3,8 @@ layout: post
 title:  "mateCarousel: a lightweigth javascript carousel"
 date:   2016-02-07 12:12:12 -0200
 author: "mate paiva"
-excerpt: "mateCarousel is a lightweight carousel with a simple API. It transform class element into slides and give you the control of it, using a config object and some API commands to use on the go. With this carousel, you can set autoplay, configure buttons, bullet-menu to chose between slides and a lot more. The way this API was developed let you chose from using the built-in solutions or handle the situations by yourself."
+excerpt: "mateCarousel is a lightweight carousel which transforms class element into slides and give you the control of it. Features: autoplay, configure buttons, bullet-menu and a lot more."
+image: mateCarousel.png
 ---
 
 <style>

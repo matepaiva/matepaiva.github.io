@@ -26,17 +26,14 @@ permalink: /projetos/
   <div class="item-title post-title"> <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></div>
 
   <div class="item-body pure-g">
+    {% if post.image %}
     <div class="item-img pure-u-1 pure-u-md-1-2">
-      {% assign images = post.content | split:"<img " %}
-      {% for image in images %}
-        {% if image contains 'src=' %}
-          {% assign imageMarkup = image | split:">" | first %}
-          <img {{ imageMarkup }}>
-          {% break %}
-        {% endif %}
-      {% endfor %}
+      <img src="/assets/{{post.image}}" alt="thumbnail image">
     </div>
     <div class="pure-u-1 pure-u-md-1-2">
+      {% else %}
+    <div class="pure-u-1">
+      {% endif %}
       <div class="l-box">
         <div class="pure-g">
           <div class="item-description pure-u-1">

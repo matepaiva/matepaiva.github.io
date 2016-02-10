@@ -4,7 +4,7 @@ title:  "Month Calendar Generator: three options to build a calendar sheet"
 date:   2016-02-09 13:35:12 -0200
 author: "mate paiva"
 image: calendar.png
-excerpt: "With Month Calendar Generator, we ask you a year and a month -- and we return to you the sheet of that period in 3 different ways: as an array of arrays (6 lines with 7 days in each), as an table with all the content and a bunch of classes set up, or as divs inside divs, instead of a table but with the same features (just for those who has problems with tables)."
+excerpt: "It asks you a year and a month ─ and it returns the sheet of that period: or as an array of arrays, or as an table with all the content and a bunch of classes set up, or as divs inside divs."
 ---
 
 <style>

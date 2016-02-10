@@ -27,8 +27,7 @@ layout: default
             <div class="l-box">
               <div class="pure-g">
                 <div class="item-description pure-u-1">
-                  <span class="item-date icon-calendar"> {{ post.date | date: "%b %-d, %Y" }}</span>
-                  {{ post.excerpt }}
+                  <span class="item-date icon-calendar"> {{ post.date | date: "%b %-d, %Y" }}</span> {{ post.excerpt }}
                   <a href="{{ post.url | prepend: site.baseurl }}" class="item-read-more">LEIA MAIS</a>
                 </div>
               </div>
@@ -38,7 +37,7 @@ layout: default
       </div>
       {% endfor %}
     </div>
-    </section>
+</section>
   <!-- END PROJETOS -->
 
 {% include charts.html %}
