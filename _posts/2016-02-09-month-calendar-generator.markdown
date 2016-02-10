@@ -61,7 +61,7 @@ The calendar sheet below was build automatically by Month Calendar Generator. Cl
   <div id="calendar"></div>
 
 <div>
-Try it yourself! Insert a date in format "YYYY" and "MM":
+Try it yourself! Insert a date in format "YYYY" and "MM". Remember: in JavaScript, month starts at 0 and ends at 11.
  <br>
  <br>
   <input type="year" id="year" placeholder="YYYY">
