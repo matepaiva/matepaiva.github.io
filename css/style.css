@@ -350,12 +350,13 @@ li {
 .item-date {
   font-size: 0.8em;
   display: block;
-  width: 90px;
+  width: 100px;
   border-radius: 1px;
   border: 1px solid darkslategray;
-  padding: 3px;
+  padding: 4px 3px 3px 3px;
   margin: 6px 0;
   color: darkslategray;
+  text-align: center;
 }
 
 .item-description {
