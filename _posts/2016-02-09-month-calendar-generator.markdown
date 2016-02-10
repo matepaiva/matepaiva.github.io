@@ -19,14 +19,15 @@ padding-bottom: 10px;
 
 .month{
 margin: 0 auto;
+width: 100%;
+max-width: 300px;
 }
 
 .day {
-width: 30px;
-height: 30px;
+width: 14.285%;
 display: inline-block;
-margin: 5px;
 text-align: center;
+padding: 7px 0;
 }
 
 .last-month {
@@ -61,7 +62,7 @@ The calendar sheet below was build automatically by Month Calendar Generator. Cl
   <div id="calendar"></div>
 
 <div>
-Try it yourself! Insert a date in format "YYYY" and "MM". Remember: in JavaScript, month starts at 0 and ends at 11.
+Try it yourself! Insert a date in format "YYYY" and "MM". Remember: in JavaScript, month starts at 0 and ends at 11. For exemplo, February => 1.
  <br>
  <br>
   <input type="year" id="year" placeholder="YYYY">
