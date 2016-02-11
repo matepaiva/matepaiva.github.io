@@ -20,12 +20,17 @@ border: 1px solid rgba(0,0,0,0.1);
 
 #output {
 margin: auto;
+padding: 10px;
 margin-bottom: 15px;
 border: 1px solid grey;
 color: red;
 width: 100%;
-max-width: 350px;
-height:20px;
+max-width: 330px;
+height:50px;
+}
+
+#output *{
+margin: auto;
 }
 
 #year, #month {
@@ -85,6 +90,7 @@ var config = {
     output.innerHTML = new Date(parseInt(date));
   },
   table: true
+  hasButtons: true
 };
 
 monthCalendarGen().constructSheet(calendar, config);
@@ -92,25 +98,13 @@ monthCalendarGen().constructSheet(calendar, config);
 
 The calendar sheet below was build automatically by Month Calendar Generator. 
 
-**Click on any day** to get it "Date.parse" value inside an alert box.
+**Click on any day** to get it date value inside the box below.
 
   <div id="calendar"></div>
   <div id="output"></div>
 
-<div>
-Try it yourself! Insert a date in format "YYYY" and "MM". Remember: in JavaScript, month starts at 0 and ends at 11. So: January =>0, February => 1...  December => 11.
- <br>
- <br>
-  <input type="text" id="year" placeholder="YYYY">
-  <input type="text" id="month" placeholder="MM">
-  
-  <button onclick="changeMonth(year.value, month.value)">Change month</button>
-  <br><br>
-</div>
-
-
 <h3>Get Month Calendar Generator!</h3>
-It's just 2.8kB. [Download it now](https://raw.githubusercontent.com/matepaiva/month-calendar-generator/master/monthCalendarGen.min.js)! Or fork the [GitHub repo](https://github.com/matepaiva/month-calendar-generator/).
+[Download it now](https://raw.githubusercontent.com/matepaiva/month-calendar-generator/master/monthCalendarGen.min.js)! Or fork the [GitHub repo](https://github.com/matepaiva/month-calendar-generator/).
 
 <h3>Introduction</h3>
 
@@ -129,14 +123,14 @@ var weeksNow = monthCalendarGen().run(); // returns an array of the current mont
 
 ![monthCalendar Example Console](https://raw.githubusercontent.com/matepaiva/month-calendar-generator/master/example.png)
 
-You must pass the date as two arguments, first being year(YYYY) and second being month (MM). Remember: in JavaScript, month starts at 0 and ends at 11.
+You must pass the date as two arguments, first being year (YYYY) and second being month (MM). Remember: in JavaScript, month starts at 0 and ends at 11.
 
 If you pass no argument to monthCalendarGen() or a wrong argument (like a string), it will assume date is New Date() -- which means, now. You will get the sheet of the current month.
 
 {% highlight javascript %}
 var December2016 = monthCalendarGen(2016, 11).run();
 var currentMonth = monthCalendarGen().run();
-var alsoCurrentmonth = monthCalendarGen("ablablidubla").run();
+var alsoCurrentMonth = monthCalendarGen("ablablidubla").run();
 {% endhighlight %}
 
 But if you want to build a calendar, we can handle this. You will see now.
@@ -153,10 +147,10 @@ This...
 
 {% highlight html %}
 <body>
-<div id="calendar"></div>
+  <div id="calendar"></div>
 
-<script src="monthCalendarGen.js"></script>
-<script src="index.js"></script>
+  <script src="monthCalendarGen.js"></script>
+  <script src="index.js"></script>
 </body>
 {% endhighlight %}
 
@@ -175,7 +169,12 @@ monthCalendarGen(2016, 1).constructSheet(calendar);
   <div id="calendar">
     <div class="month">
       <div class="month-head">
-        <div class="month-title">2016 Fevereiro</div>
+        <div class="month-head-line">
+          <div class="button-before">«</div>
+          <div class="year-title">2016</div>
+          <div class="month-title">Fevereiro</div>
+          <div class="button-next">»</div>
+        </div>
         <div class="weekdays">
           <div class="weekday">Dom</div>
           <div class="weekday">Seg</div>
@@ -257,7 +256,7 @@ If you want it to display as table, you just have to pass an extra argument into
 {% highlight javascript %}
 var calendar = document.getElementById("calendar"); //the outer element.
 
-monthCalendarGen(2016, 02).constructSheet(calendar, {table:true});
+monthCalendarGen(2016, 01).constructSheet(calendar, {table:true});
 {% endhighlight %}
 
 And then, when you reload your html, it will be like this:
@@ -268,7 +267,9 @@ And then, when you reload your html, it will be like this:
     <table class="month">
       <thead class="month-head">
         <tr class="month-head-line">
-          <th class="month-title" colspan="7">2016 Fevereiro</th>
+         <th class="button-before" colspan="1">«</th>
+         <th class="year-title" colspan="2">2016</th>
+         <th colspan="3" class="month-title">Fevereiro</th><th class="button-next" colspan="1">»</th>
         </tr>
         <tr class="weekdays">
           <th class="weekday">Dom</th>
@@ -347,7 +348,7 @@ And then, when you reload your html, it will be like this:
 That's it. Now the details:
 
 <h3>The config object</h3>
-Untill now, there are 3 values you can set in your config object:
+There are some values you can set in your config object:
 
 {% highlight javascript %}
 var config = {
@@ -362,7 +363,10 @@ var config = {
   sendDateTo: function(date){
     console.log(date); //example
   }, 
-  table: true // default is false.
+  table: true, // default is false.
+  hasButtons: true, //default is false.
+  butBackChar: "<", // default is "«"
+  butNextChar: ">" // default is "»"
 };
 {% endhighlight %}
 
@@ -373,7 +377,10 @@ As you could see, there are some built-in classes inside the Month Calendar Gene
   .month
     .month-head
       .month-head-line
+        .button-before
+        .year-title
         .month-title
+        .button-next
       .weekdays
         .weekday
     .month-body
@@ -391,8 +398,7 @@ Feel free to contribute with the code and fork the repository. And [here you hav
 
 
 <script>
-var monthCalendarGen=function(e,t){var d,a=/^[0-9]{1,2}$/,n=/^[0-9]{4}$/;d=void 0!==e&&void 0!==t&&n.test(e)&&a.test(t)?new Date(e,t):new Date;var r=new Date,l=new Date(r.getFullYear(),r.getMonth(),r.getDate()),s=d.getMonth(),o=d.getFullYear(),i=new Date(d.getFullYear(),d.getMonth(),1),c=new Date(d.getFullYear(),d.getMonth()+1,0),v=new Date(d.getFullYear(),d.getMonth(),1-i.getDay()),h=new Date(d.getFullYear(),d.getMonth()+1,13-c.getDay()),u=function(){for(var e=[],t=6,a=0;t>a;a++){for(var n=[],d=new Date(v.getFullYear(),v.getMonth(),v.getDate()+7*a),r=0;7>r;r++){var l=new Date(d.getFullYear(),d.getMonth(),d.getDate()+r);n.push(l)}e.push(n)}return e},m=function(e,t){t(e)},p=function(e,t){void 0===t&&(t={});var a={months:t.months||["January","February","March","April","May","June","July","August","September","October","November","December"],weekDays:t.weekDays||["Sun","Mon","Tue","Wed","Thu","Fri","Sat"],sendDateTo:t.sendDateTo,table:t.table||!1},n=u(d),r=document.createElement(a.table?"table":"div");r.classList.add("month");var i=document.createElement(a.table?"thead":"div");i.classList.add("month-head");var c=document.createElement(a.table?"tbody":"div");if(c.classList.add("month-body"),a.table){var v=document.createElement(a.table?"tr":"div");v.classList.add("month-head-line"),i.appendChild(v)}var h=document.createElement(a.table?"th":"div");h.classList.add("month-title"),a.table&&(h.colSpan="7");var p=document.createTextNode(o+" "+a.months[s]);h.appendChild(p),a.table?v.appendChild(h):i.appendChild(h);var D=document.createElement(a.table?"tr":"div");D.classList.add("weekdays"),i.appendChild(D);for(var g=0;g<a.weekDays.length;g++){var f=document.createElement(a.table?"th":"div");f.classList.add("weekday");var y=document.createTextNode(a.weekDays[g]);f.appendChild(y),D.appendChild(f)}r.appendChild(i),r.appendChild(c),e.appendChild(r);for(var b=0;b<n.length;b++){v=document.createElement(a.table?"tr":"div"),v.classList.add("week");for(var w=0;w<n[b].length;w++){var C=document.createElement(a.table?"td":"div");n[b][w].getMonth()<s?C.classList.add("last-month"):n[b][w].getMonth()>s?C.classList.add("next-month"):Date.parse(n[b][w])==Date.parse(l)&&C.classList.add("today"),C.classList.add("day");var M=document.createTextNode(n[b][w].getDate());C.dataset.date=Date.parse(n[b][w]),a.sendDateTo&&(C.onclick=function(){for(var e=document.getElementsByClassName("active-day"),t=0;t<e.length;t++)e[t].classList.remove("active-day");this.classList.add("active-day"),m(this.dataset.date,a.sendDateTo)}),C.appendChild(M),v.appendChild(C)}c.appendChild(v)}};return{month:s,year:o,today:l,now:r,firstMonthDay:i,lastMonthDay:c,firstCalendarDay:v,lastCalendarDay:h,run:function(){return u()},constructSheet:function(e,t){p(e,t)}}};
-
+var monthCalendarGen=function(e,t){var d,a=/^-?[0-9]{1,2}$/,n=/^-?[0-9]{4}$/;d=void 0!==e&&void 0!==t&&n.test(e)&&a.test(t)?new Date(e,t):new Date;var r=new Date,l=new Date(r.getFullYear(),r.getMonth(),r.getDate()),s=d.getMonth(),o=d.getFullYear(),c=new Date(d.getFullYear(),d.getMonth(),1),i=new Date(d.getFullYear(),d.getMonth()+1,0),h=new Date(d.getFullYear(),d.getMonth(),1-c.getDay()),u=new Date(d.getFullYear(),d.getMonth()+1,13-i.getDay()),v=function(){for(var e=[],t=6,a=0;t>a;a++){for(var n=[],d=new Date(h.getFullYear(),h.getMonth(),h.getDate()+7*a),r=0;7>r;r++){var l=new Date(d.getFullYear(),d.getMonth(),d.getDate()+r);n.push(l)}e.push(n)}return e},m=function(e,t){t(e)},p=function(e,t){void 0===t&&(t={});var a={months:t.months||["January","February","March","April","May","June","July","August","September","October","November","December"],weekDays:t.weekDays||["Sun","Mon","Tue","Wed","Thu","Fri","Sat"],sendDateTo:t.sendDateTo,table:t.table||!1,hasButtons:t.hasButtons||!1,butBackChar:t.butBackChar||"«",butNextChar:t.butNextChar||"»"},n=function(a){e.innerHTML="",monthCalendarGen(o,s+a).constructSheet(e,t)},r=v(d),c=document.createElement(a.table?"table":"div");c.classList.add("month");var i=document.createElement(a.table?"thead":"div");i.classList.add("month-head");var h=document.createElement(a.table?"tbody":"div");h.classList.add("month-body");var u=document.createElement(a.table?"tr":"div");u.classList.add("month-head-line"),i.appendChild(u);var p=document.createElement(a.table?"th":"div");p.classList.add("button-before"),p.colSpan="1",a.hasButtons&&(p.appendChild(document.createTextNode(a.butBackChar)),p.onclick=function(){n(-1)});var f=document.createElement(a.table?"th":"div");f.classList.add("year-title"),f.colSpan="2";var D=document.createTextNode(o);f.appendChild(D);var b=document.createElement(a.table?"th":"div");b.colSpan="3",b.classList.add("month-title");var g=document.createTextNode(a.months[s]);b.appendChild(g);var C=document.createElement(a.table?"th":"div");C.classList.add("button-next"),C.colSpan="1",a.hasButtons&&(C.appendChild(document.createTextNode(a.butNextChar)),C.onclick=function(){n(1)}),u.appendChild(p),u.appendChild(f),u.appendChild(b),u.appendChild(C);var y=document.createElement(a.table?"tr":"div");y.classList.add("weekdays"),i.appendChild(y);for(var w=0;w<a.weekDays.length;w++){var L=document.createElement(a.table?"th":"div");L.classList.add("weekday");var M=document.createTextNode(a.weekDays[w]);L.appendChild(M),y.appendChild(L)}c.appendChild(i),c.appendChild(h),e.appendChild(c);for(var E=0;E<r.length;E++){u=document.createElement(a.table?"tr":"div"),u.classList.add("week");for(var T=0;T<r[E].length;T++){var k=document.createElement(a.table?"td":"div");r[E][T].getMonth()<s?k.classList.add("last-month"):r[E][T].getMonth()>s?k.classList.add("next-month"):Date.parse(r[E][T])==Date.parse(l)&&k.classList.add("today"),k.classList.add("day");var x=document.createTextNode(r[E][T].getDate());k.dataset.date=Date.parse(r[E][T]),a.sendDateTo&&(k.onclick=function(){for(var e=document.getElementsByClassName("active-day"),t=0;t<e.length;t++)e[t].classList.remove("active-day");this.classList.add("active-day"),m(this.dataset.date,a.sendDateTo)}),k.appendChild(x),u.appendChild(k)}h.appendChild(u)}};return{month:s,year:o,today:l,now:r,firstMonthDay:c,lastMonthDay:i,firstCalendarDay:h,lastCalendarDay:u,run:function(){return v()},constructSheet:function(e,t){p(e,t)}}};
 
 var calendar = document.getElementById("calendar");
 var year = document.getElementById("year");
@@ -406,6 +412,7 @@ var config = {
     output.innerHTML = new Date(parseInt(date));
   },
   table: true,
+  hasButtons: true,
 };
 
 monthCalendarGen().constructSheet(calendar, config);
