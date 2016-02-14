@@ -6,10 +6,6 @@ layout: default
 {% include whois.html %}
 
 
-{% for category in site.categories %}
-  {{site.categories}}
-{% endfor %}
-
 <!-- PROJETOS -->
 <section class="site-section">
   <div class="section-head">
@@ -17,8 +13,7 @@ layout: default
     <a href="{{ site.baseurl }}/projetos" class="section-read-more">Ver todos</a>
   </div>
   <div class="section-body pure-g">
-    {% for post in site.posts %}
-    {% if post.category == "projetos" limit:4 %}
+    {% for post in site.categories.projetos limit:4 %}
     <div class="section-item pure-u-1 pure-u-md-1-2">
       <div class="item-title"> <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
       </div>
@@ -42,7 +37,6 @@ layout: default
           </div>
         </div>
       </div>
-      {% endif %}
       {% endfor %}
     </div>
 </section>
@@ -55,8 +49,7 @@ layout: default
       <a href="{{ site.baseurl }}/projetos" class="section-read-more">Ver todos</a>
     </div>
     <div class="section-body pure-g">
-      {% for post in site.posts limit:4 %}
-      {% if post.category != "projetos"%}
+      {% for post in site.categories.blog limit:4 %}
       <div class="section-item pure-u-1 pure-u-md-1-2">
         <div class="item-title"> <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
         </div>
@@ -80,7 +73,6 @@ layout: default
             </div>
           </div>
         </div>
-        {% endif %}
         {% endfor %}
       </div>
       </section>

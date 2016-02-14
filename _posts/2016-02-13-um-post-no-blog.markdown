@@ -1,10 +1,11 @@
 ---
 layout: post
 title:  "Um post no blog"
-date:   2016-02-13 13:35:12 -0200
+date:   2016-02-05 13:35:12 -0200
 author: "mate paiva"
 image: calendar.png
 excerpt: "It asks you a year and a month ─ and it returns the sheet of that period: or as an array of arrays, or as an table with all the content and a bunch of classes set up, or as divs inside divs."
+category: blog
 ---
 
 <style>

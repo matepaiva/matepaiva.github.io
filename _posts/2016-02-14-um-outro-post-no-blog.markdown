@@ -1,10 +1,11 @@
 ---
 layout: post
 title:  "Um outro post no blog"
-date:   2016-02-14 12:12:12 -0200
+date:   2016-02-04 12:12:12 -0200
 author: "mate paiva"
 excerpt: "mateCarousel is a lightweight carousel which transforms class element into slides and give you the control of it. Features: autoplay, configure buttons, bullet-menu and a lot more."
 image: mateCarousel.png
+category: blog
 ---
 
 <style>
