@@ -10,7 +10,7 @@ title: Mate Paiva
 email: mmccpp@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
   Mate Paiva, desenvolvedor web & JavaScript. Soluções para front-end, back-end, Node.Js, Angular.Js, MongoDB, Mobile, PhoneGap - e onde mais a web se infiltrar. 
-baseurl: "/" # the subpath of your site, e.g. /blog
+baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://matepaiva.github.io" # the base hostname & protocol for your site
 slogan: "Desenvolvimento web também é coisa de humanas."
 blogtitle: "Meus Projetos"
