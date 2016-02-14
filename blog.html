@@ -1,11 +1,11 @@
 ---
 layout: default
-title: Projetos
-permalink: /projetos/
+title: blog
+permalink: /blog/
 ---
 <p class="site-slogan">matepaiva// {{ page.title }}</p>
 
-{% for post in site.categories.projetos %}
+{% for post in site.categories.blog %}
 <article class="post-wrap" itemscope itemtype="http://schema.org/BlogPosting">
   <header class="section-head post-head">
     {% if post.date %}
@@ -19,7 +19,7 @@ permalink: /projetos/
       </span>
     {% endif %}
     {% for category in post.categories %}
-      <a href="{{site.baseurl}}/{{ category }}"><div class="post-meta post-category icon-category"> {{ category }}</div></a>
+    <a href="{{ site.baseurl }}/{{category}}"><div class="post-meta post-category icon-category"> {{ category }}</div></a>
     {% endfor %}
   </header>
 
