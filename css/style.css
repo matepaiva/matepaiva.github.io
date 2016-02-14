@@ -71,6 +71,7 @@ body {
   text-align: left;
   color: #474747;
   font-size: 0.9em;
+  list-style: none;
 }
 
 .curr ul {
@@ -507,6 +508,10 @@ p > img {
   width: 12px;
   border-radius: 2px;
   margin-right: 4px;
+}
+
+#legend-chart-js li, #legend-chart-other li {
+  list-style: none;
 }
 
 
