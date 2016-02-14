@@ -157,7 +157,7 @@ li {
   color: white;
   padding-top: 6px;
   font-size: 0.7em;
-  margin-top: -11px;
+  margin-top: 10px;
 }
 
 .site-footer ul {
@@ -262,6 +262,15 @@ li {
   animation-iteration-count: infinite;
   animation-direction: alternate;
   animation-timing-function: linear;
+}
+
+#disqus_thread {
+  max-width: 830px;
+  margin: auto;
+  background-color: #FFFFFF;
+  padding: 10px 20px 10px 20px;
+  margin-bottom: 15px;
+  margin-top: -5px;
 }
 
 @keyframes blink {
