@@ -41,8 +41,8 @@ h1 {
   margin-bottom: 0;
 }
 
-h1>span {
-  color: gray;
+h2>span {
+    color: dimgrey;
 }
 
 h2 {
@@ -50,7 +50,7 @@ h2 {
   border-bottom: 1px solid black;
   color: gray;
   text-align: right;
-  margin: 5px 150px 6px 0px;
+  margin: 12px 100px 12px 0px;
 }
 
 h3,
@@ -72,6 +72,10 @@ p {
 
 li {
   font-size: 0.9em;
+}
+
+section>ul>li {
+    padding-bottom: 5px;
 }
 
 
@@ -156,18 +160,18 @@ content {
   margin-top: 0px;
 }
 
-.writer,
-.developer {
+.left,
+.right {
   display: block;
   background-color: white;
 }
 
-.writer {
+.left {
   float: left;
   padding-left: 30px;
 }
 
-.developer {
+.right {
   padding-right: 30px;
   float: right;
 }
@@ -178,6 +182,15 @@ section {
 
 ul li ul li {
   margin-left: 20px;
+}
+
+ul li ul li ul li{
+    margin-left: 20px;
+    color: grey;
+}
+
+ul li ul li ul li:before{
+    content: "";
 }
 
 ul li ul li:before {
