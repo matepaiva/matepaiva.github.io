@@ -1,44 +1,44 @@
 /* SIMPLE CSS RESET AND RESPONSIVE SETTINGS*/
 
 * {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  vertical-align: baseline;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    vertical-align: baseline;
 }
 
 a,
 a:visited {
-  color: inherit;
-  text-decoration: none;
+    color: inherit;
+    text-decoration: none;
 }
 
 html {
-  font-size: 15px;
-  background-color: black;
-  font-family: 'Open Sans', sans-serif;
+    font-size: 15px;
+    background-color: black;
+    font-family: 'Open Sans', sans-serif;
 }
 
 body {
-  height: 29.7cm;
-  width: 21cm;
-  margin: auto;
-  background-color: white;
+    height: 29.7cm;
+    width: 21cm;
+    margin: auto;
+    background-color: white;
 }
 
 h1,
 h2,
 h4,
 h5 {
-  font-family: 'Raleway', sans-serif;
+    font-family: 'Raleway', sans-serif;
 }
 
 h1 {
-  font-size: 1.4em;
-  text-transform: lowercase;
-  text-align: center;
-  margin: 5px 0 15px 0;
-  margin-bottom: 0;
+    font-size: 1.4em;
+    text-transform: lowercase;
+    text-align: center;
+    margin: 5px 0 15px 0;
+    margin-bottom: 0;
 }
 
 h2>span {
@@ -46,36 +46,36 @@ h2>span {
 }
 
 h2 {
-  font-size: 1em;
-  border-bottom: 1px solid black;
-  color: gray;
-  text-align: right;
-  margin: 12px 100px 12px 0px;
+    font-size: 1em;
+    border-bottom: 1px solid black;
+    color: gray;
+    text-align: right;
+    margin: 5px 100px 12px 0px;
 }
 
 h3,
 h4,
 h5 {
-  font-size: 1em;
-  margin-top: 3px;
-  margin-bottom: 2px;
+    font-size: 1em;
+    margin-top: 3px;
+    margin-bottom: 2px;
 }
 
 h6 {
-  font-size: 0.7em;
-  text-transform: uppercase;
+    font-size: 0.7em;
+    text-transform: uppercase;
 }
 
 p {
-  font-size: 1.0em;
+    font-size: 1.0em;
 }
 
 li {
-  font-size: 0.9em;
+    font-size: 0.9em;
 }
 
 section>ul>li {
-    padding-bottom: 5px;
+    padding-bottom: 3px;
 }
 
 
@@ -83,105 +83,105 @@ section>ul>li {
 
 header,
 footer {
-  font-size: 0.8em;
-  background-color: #f0db4f;
-  width: 100%;
-  display: inline-block;
-  float: both;
+    font-size: 0.8em;
+    background-color: #f0db4f;
+    width: 100%;
+    display: inline-block;
+    float: both;
 }
 
 header {
-  border-bottom: 4px solid #F8EFB4;
+    border-bottom: 4px solid #F8EFB4;
 }
 
 header .wrapper {
-  display: block;
-  padding: 0.20cm;
-  padding-top: 0.07cm;
-  background-color: #f0db4f;
+    display: block;
+    padding: 0.20cm;
+    padding-top: 0.07cm;
+    background-color: #f0db4f;
 }
 
 header .left {
-  width: 14cm;
-  float: left;
-  margin: 3px 0 0 0;
+    width: 14cm;
+    float: left;
+    margin: 3px 0 0 0;
 }
 
 header .right {
-  font-size: 0.9em;
-  width: 5.8cm;
-  float: right;
-  padding: 9px 0 0 16px;
+    font-size: 0.9em;
+    width: 5.8cm;
+    float: right;
+    padding: 9px 0 0 16px;
 }
 
 header .title {
-  font-size: 1.8em;
-  text-transform: lowercase;
-  font-weight: bold;
-  text-align: center;
+    font-size: 1.8em;
+    text-transform: lowercase;
+    font-weight: bold;
+    text-align: center;
 }
 
 header .description {
-  background-color: inherit;
-  border-radius: 1px;
-  border: #F8EFB4 2px solid;
-  padding: 0.2cm;
-  vertical-align: text-bottom;
-  line-height: 1.6em;
-  text-align: justify;
-  height: 90%;
+    background-color: inherit;
+    border-radius: 1px;
+    border: #F8EFB4 2px solid;
+    padding: 0.2cm;
+    vertical-align: text-bottom;
+    line-height: 1.6em;
+    text-align: justify;
+    height: 90%;
 }
 
 header aside {
-  border-radius: 1px;
-  border: inherit 2px solid;
-  background-color: inherit;
-  color: black;
-  padding: 0.1 0.2cm;
-  line-height: 1.3em;
+    border-radius: 1px;
+    border: inherit 2px solid;
+    background-color: inherit;
+    color: black;
+    padding: 0.1 0.2cm;
+    line-height: 1.3em;
 }
 
 .data-pair {
-  padding-bottom: 5px;
+    padding-bottom: 5px;
 }
 
 .data-pair .label,
 .data-unity {
-  text-transform: uppercase;
-  font-weight: bold;
+    text-transform: uppercase;
+    font-weight: bold;
 }
 
 content {
-  font-size: 1em;
-  background-color: white;
-  width: 100%;
-  display: inline-block;
-  float: both;
-  margin-top: 0px;
+    font-size: 1em;
+    background-color: white;
+    width: 100%;
+    display: inline-block;
+    float: both;
+    margin-top: 0px;
 }
 
 .left,
 .right {
-  display: block;
-  background-color: white;
+    display: block;
+    background-color: white;
 }
 
 .left {
-  float: left;
-  padding-left: 30px;
+    float: left;
+    padding-left: 30px;
 }
 
 .right {
-  padding-right: 30px;
-  float: right;
+    padding-right: 30px;
+    float: right;
 }
 
 section {
-  width: 9.4cm;
+    width: 9.4cm;
 }
 
 ul li ul li {
-  margin-left: 20px;
+    margin-left: 20px;
 }
 
 ul li ul li ul li{
@@ -190,69 +190,69 @@ ul li ul li ul li{
 }
 
 ul li ul li ul li:before{
-    content: "";
+    content: "· ";
 }
 
 ul li ul li:before {
-  content: "- ";
-  font-size: 0.8em;
-  font-weight: 100;
-  color: grey;
+    content: "";
+    font-size: 0.8em;
+    font-weight: 100;
+    color: grey;
 }
 
 footer {
-  height: 116px;
+    height: 116px;
 }
 
 .languages,
 .experience-abroad,
 .awards,
 .street-art {
-  display: inline-block;
-  width: 23.39%;
-  height: 100%;
-  vertical-align: top;
-  padding: 0px 5px;
+    display: inline-block;
+    width: 23.39%;
+    height: 100%;
+    vertical-align: top;
+    padding: 0px 5px;
 }
 
 .languages,
 .awards {
-  background-color: #f0db4f;
+    background-color: #f0db4f;
 }
 
 .experience-abroad,
 .street-art {
-  background-color: #EBD01E;
+    background-color: #EBD01E;
 }
 
 footer ul li {
-  padding-left: 10px;
-  padding-bottom: 5px;
+    padding-left: 10px;
+    padding-bottom: 5px;
 }
 
 footer ul li:before {
-  content: "- ";
-  font-size: 1em;
-  font-weight: 100;
-  color: black;
-  font-weight: bold;
+    content: "· ";
+    font-size: 1em;
+    font-weight: 100;
+    color: black;
+    font-weight: bold;
 }
 
 
 /* @page {
-    size: A4;
-    margin: 0;
+size: A4;
+margin: 0;
 }
 
 @media print {
-    html {
-        background-color: white;
-    }
+html {
+background-color: white;
+}
 
-    body {
-        height: 29.7cm;
-        width: 21cm;
-        margin: auto;
-        background-color: white;
-    }
+body {
+height: 29.7cm;
+width: 21cm;
+margin: auto;
+background-color: white;
+}
 } */
